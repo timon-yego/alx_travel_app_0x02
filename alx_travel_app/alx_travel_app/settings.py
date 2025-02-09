@@ -83,6 +83,7 @@ import environ
 env = environ.Env()
 environ.Env.read_env()
 
+CHAPA_PUBLIC_KEY = env("CHAPA_PUBLIC_KEY")
 CHAPA_SECRET_KEY = env("CHAPA_SECRET_KEY")
 CHAPA_BASE_URL = "https://api.chapa.co/v1"
 

@@ -42,9 +42,7 @@ class ReviewViewSet(viewsets.ModelViewSet):
     serializer_class = ReviewSerializer
 
 class InitiatePaymentView(APIView):
-    """
-    Handles payment initiation using Chapa API.
-    """
+    permission_classes = [IsAuthenticated]  # Ensure only authenticated users can access
 
     def post(self, request):
         """
